@@ -25,8 +25,6 @@ However, I also animate logos using Adobe Premiere as well as create them using 
   <img align="left" alt="Steve Nginyo | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
 </a>
 
-##################################################
-
 ### - Languages and Tools...
 
 <p align="center">
@@ -43,3 +41,15 @@ However, I also animate logos using Adobe Premiere as well as create them using 
     <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/tools/bash.svg" alt="bash" style="vertical-align:top; margin:4px">
     <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/tools/visualstudio_code.svg" alt="vscode" style="vertical-align:top; margin:4px">
 </p>
+
+### - Website 📟 & Blog 🌱
+
+<a align="center" href="https://stevieapp254.web.app">
+<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="50px" height="50px"> 
+</a>
+
+### - Youtube 🎬
+
+<a align="center" href="https://www.youtube.com/channel/UCMgSZTdAgGxqPbtkUm7VhCg">
+<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="50px" height="50px"> 
+</a>
