@@ -12,7 +12,7 @@ export class TechnologiesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  portifolios = [
+  portfolios = [
     {
       imageurl: "../../../assets/reap.png",
       title: "Reap Web",
@@ -31,7 +31,7 @@ export class TechnologiesComponent implements OnInit {
     },
     {
       imageurl: "../../../assets/tripplanner.png",
-      title: "Eventer",
+      title: "Trip Planner",
       type: "Event Planning",
       description: "Trip Planning and Organizing Mobile & iOS application. Using Ionic, Firebase Functions, API Payment Integration",
       text: "View Source Code",
