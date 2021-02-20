@@ -1,6 +1,6 @@
 ### Hi, I'm Steve Nginyo! 👋. 
 
-<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" width="100%" height="300px">
+<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" width="100%" height="300px" style="background-position:center; background-size:cover;">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
