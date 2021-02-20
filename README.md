@@ -12,7 +12,8 @@ However, I also animate logos using Adobe Premiere as well as create them using 
 </a>
 <br>
 
-###Also find me on
+### Also find me on 
+
 <a href="https://www.youtube.com/channel/UCMgSZTdAgGxqPbtkUm7VhCg" target="_blank">
   <img align="left" alt="StevieApp | Youtube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />
 </a>
