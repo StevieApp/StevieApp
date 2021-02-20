@@ -31,7 +31,7 @@ However, I also animate logos using Adobe Premiere as well as create them using 
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/languages/html.svg" alt="html" style="vertical-align:top; margin:4px">    
-    <img src="https://visualpharm.com/assets/0/Java-595b40b75ba036ed117d7fb3.svg" alt="java" style="vertical-align:top; margin:4px" height="10px" height="width:10px;">
+    <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon-by-vexels.png" alt="java"         style="vertical-align:top; margin:4px" height="40px" height="width:40px;">
     <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/languages/js.svg" alt="js" style="vertical-align:top; margin:4px">
     <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/languages/python.svg" alt="python" style="vertical-align:top; margin:4px">
     <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/misc/chrome.svg" alt="chrome" style="vertical-align:top; margin:4px">
