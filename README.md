@@ -1,6 +1,4 @@
-### Hi, I'm Steve Nginyo! 👋. 
-
-<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" style="object-position:center; object-fit:cover;" width="100%" height="400px">
+<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" style="object-position:center; object-fit:cover;" width="100%">
 
 ### I seek to provide efficient and reliable systems while solving user problems as per the requirements.
 
