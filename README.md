@@ -47,11 +47,11 @@ However, I also animate logos using Adobe Premiere as well as create them using 
 ### - Website 📟 & Blog 🌱
 
 <a align="center" href="https://stevieapp254.web.app">
-<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="50px" height="50px"> 
+<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="200px" > 
 </a>
 
 ### - Youtube 🎬
 
 <a align="center" href="https://www.youtube.com/channel/UCMgSZTdAgGxqPbtkUm7VhCg">
-<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="50px" height="50px"> 
+<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="200px"> 
 </a>
