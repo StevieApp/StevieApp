@@ -16,11 +16,14 @@ However, I also animate logos using Adobe Premiere as well as create them using 
 
 <a href="https://www.youtube.com/channel/UCMgSZTdAgGxqPbtkUm7VhCg" target="_blank">
   <img align="left" alt="StevieApp | Youtube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />
+  StevieApp
 </a>
 <a href="https://www.linkedin.com/in/steve-njoroge-3607a7139/" target="_blank">
   <img align="left" alt="Steve Nginyo | Linkedin" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+  Steve Nginyo
 </a>
 
 <a href="https://www.instagram.com/stevenginyo/" target="_blank">
   <img align="left" alt="Steve Nginyo | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
+  Steve Nginyo
 </a>
