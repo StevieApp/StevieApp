@@ -1,4 +1,12 @@
-<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" style="object-position:center; object-fit:cover;" width="100%">
+<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" class="centering" style="" width="100%">
+
+<style>
+  .centering{
+    object-position:center; 
+    object-fit:cover;
+    height: 400px;
+  }
+</style>
 
 ### I seek to provide efficient and reliable systems while solving user problems as per the requirements.
 
@@ -8,7 +16,7 @@
 ### Here is a link to my website
 <a href="https://stevieapp254.web.app/" target="_blank">
   <img align="left" alt="StevieApp" width="22px" src="https://stevieapp254.web.app/assets/stevieapp2.png" />
-  ###StevieApp
+  StevieApp
 </a>
 <br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
