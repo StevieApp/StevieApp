@@ -1,6 +1,16 @@
 ### Hi, I'm Steve Nginyo! 👋. 
 
-<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" width="100%" height="300px" style="background-position:center; background-size:cover;">
+<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" width="100%" height="300px" style="object-position:center; object-fit:cover;">
+
+### I seek to provide efficient and reliable systems while solving user problems as per the requirements.
+
+### I have ventured into BackEnd and FrontEnd (FullStack Development)
+### However, I also animate logos using Adobe Premiere as well as create them using Photoshop. I'm also into CyberSecurity, on the Ethical Hacking and Pentesting aspects.
+
+### Here is a link to my website
+<a href="https://stevieapp254.web.app/" target="_blank">
+  <img align="left" alt="StevieApp" width="22px" src="https://stevieapp254.web.app/assets/stevieapp2.png" />
+</a>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
