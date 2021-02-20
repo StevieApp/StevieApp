@@ -1,6 +1,6 @@
 ### Hi, I'm Steve Nginyo! 👋. 
 
-<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" width="100%" height="300px" style="object-position:center; object-fit:cover;">
+<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" style="object-position:center; object-fit:cover;" width="100%" height="300px">
 
 ### I seek to provide efficient and reliable systems while solving user problems as per the requirements.
 
@@ -11,7 +11,7 @@
 <a href="https://stevieapp254.web.app/" target="_blank">
   <img align="left" alt="StevieApp" width="22px" src="https://stevieapp254.web.app/assets/stevieapp2.png" />
 </a>
-
+<br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
 ## Development server
