@@ -1,5 +1,7 @@
 <img src="https://stevieapp254.web.app/assets/stevieappscreen.png" style="object-position:center; object-fit:cover;" width="100%">
 
+### Hi, I'm Steve Nginyo 👋.
+
 ### I seek to provide efficient and reliable systems while solving user problems as per the requirements.
 
 I have ventured into BackEnd and FrontEnd (FullStack Development)<br>
