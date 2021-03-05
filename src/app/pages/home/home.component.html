@@ -1,4 +1,4 @@
-<div class="lessee">
+<div class="lessee" id="home">
     <div style="position: relative;z-index: 100;margin-top: auto;">
         <mat-grid-list cols = "4" rowHeight = "115vh">
             <mat-grid-tile 
@@ -40,17 +40,17 @@
                     <div style="display: inline;">
                         <a href="tel:+254-725-603-808" style="display: inline-block;">
                             <button mat-raised-button class="uptop2">
-                                <mat-icon aria-label="Example thumbs up SVG icon">phone</mat-icon> Call
+                                <mat-icon aria-label="phone icon">phone</mat-icon> Call
+                            </button>
+                        </a>
+                        <a href="/home#contacts" style="display: inline-block;">
+                            <button mat-raised-button class="uptop2">
+                                <mat-icon aria-label="contacts icon">contacts</mat-icon> Contact
                             </button>
                         </a>
                         <a href="#" style="display: inline-block;">
                             <button mat-raised-button class="uptop2">
-                                <mat-icon aria-label="Example thumbs up SVG icon">contacts</mat-icon> Contacts
-                            </button>
-                        </a>
-                        <a href="#" style="display: inline-block;">
-                            <button mat-raised-button class="uptop2">
-                                <mat-icon aria-label="Example thumbs up SVG icon">web</mat-icon> Blog
+                                <mat-icon aria-label="web icon">web</mat-icon> Blog
                             </button>
                         </a>
                     </div>    
@@ -71,3 +71,8 @@
 <div style="max-width: 99vw; margin-top: 20px;">
     <mat-divider [inset]="true" style="margin-bottom: 20px;margin-right: 80px;"></mat-divider>
 </div>
+<app-socials></app-socials>
+<div style="max-width: 99vw; margin-top: 20px;">
+    <mat-divider [inset]="true" style="margin-bottom: 20px;margin-right: 80px;"></mat-divider>
+</div>
+<app-contact></app-contact>
