@@ -105,13 +105,13 @@
 
 @keyframes boinging{
     0%{
-        transform: scale(.95,.95);
-    }
-    50%{
         transform: scale(1,1);
     }
+    50%{
+        transform: scale(1.1,1.1);
+    }
     100%{
-        transform: scale(.95,.95);
+        transform: scale(1,1);
     }
 }
 
@@ -165,7 +165,7 @@ mat-sidenav{
     font-size: 70px;
     line-height: 1.2;
     margin-left: 10px;
-    font-family: 'Agency FB', sans-serif;
+    font-family: 'Agency FB', arial;
     color: #65026e;
 }
 
@@ -175,6 +175,14 @@ mat-sidenav{
     color: #65026e;
     line-height: 1.2;
     margin-left: 12px;
+}
+
+.hoverer:hover{
+    animation: boinging 1s infinite;
+}
+
+mat-card:hover{
+    transform: scale(1.01,1.01);
 }
 
 .display-2{
