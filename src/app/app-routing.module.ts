@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { InterestsComponent } from './pages/interests/interests.component';
 import { SocialsComponent } from './pages/socials/socials.component';
 import { TechnologiesComponent } from './pages/technologies/technologies.component';
+import { UploadStoryComponent } from './pages/upload-story/upload-story.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'socials', component: SocialsComponent },
   { path: 'interests', component: InterestsComponent },
   { path: 'portifolio', component: TechnologiesComponent },
+  { path: 'upload-story', component: UploadStoryComponent },
 ];
 
 @NgModule({
