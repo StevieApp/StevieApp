@@ -14,40 +14,43 @@
                     <div>
                         <h4 class="display-4" style="max-width: 100%;">Feedback/ Proposal</h4>
                     </div>
-                    <mat-form-field appearance="fill" [color]="'secondary'">
-                        <mat-label style="color: white;">Name</mat-label>
-                        <input matInput style="color: white;">
-                    </mat-form-field>
-                    <mat-form-field appearance="fill" style="color: white;">
-                        <mat-label style="color: white;">Select</mat-label>
-                        <mat-select style="color: white;" [(ngModel)]="select">
-                            <mat-option value="Proposal" style="color: #65026e;">Proposal</mat-option>
-                            <mat-option value="Feedback" style="color: #65026e;">Feedback</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field appearance="fill" [color]="'secondary'" *ngIf="select=='Proposal'">
-                        <mat-label style="color: white;">Project Title</mat-label>
-                        <input matInput style="color: white;">
-                    </mat-form-field>
-                    <mat-form-field appearance="fill" *ngIf="select=='Proposal'">
-                        <mat-label style="color: white;">Start Date</mat-label>
-                        <input matInput [matDatepicker]="picker" style="color: white;">
-                        <mat-datepicker-toggle matSuffix [for]="picker" style="color: white;"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>
-                    <mat-form-field appearance="fill" *ngIf="select=='Proposal'">
-                        <mat-label style="color: white;">End Date</mat-label>
-                        <input matInput [matDatepicker]="picker" style="color: white;">
-                        <mat-datepicker-toggle matSuffix [for]="picker" style="color: white;"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>
-                    <mat-form-field appearance="fill">
-                        <mat-label style="color: white;">Write Feedback/Proposal</mat-label>
-                        <textarea style="color: white;" matInput rows="4"></textarea>
-                    </mat-form-field>
-                    <button mat-raised-button class="uptop2">
-                        <mat-icon aria-label="contact mail">contact_mail</mat-icon> Submit
-                    </button>
+                    <form [formGroup]="proposalForm" (validSubmit)="createproposal()" novalidate>
+                        <mat-form-field appearance="fill" [color]="'secondary'">
+                            <mat-label style="color: white;">Name</mat-label>
+                            <input matInput style="color: white;" [(ngModel)]="human.name" formControlName="name">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" style="color: white;">
+                            <mat-label style="color: white;">Select</mat-label>
+                            <mat-select style="color: white;" [(ngModel)]="human.type" formControlName="type">
+                                <mat-option value="Proposal" style="color: #65026e;">Proposal</mat-option>
+                                <mat-option value="Feedback" style="color: #65026e;">Feedback</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" [color]="'secondary'" *ngIf="human.type=='Proposal'">
+                            <mat-label style="color: white;">Project Title</mat-label>
+                            <input matInput style="color: white;" [(ngModel)]="human.projectTitle" formControlName="projecttitle"
+                            (change)="updateTitle(human.projectTitle)">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" *ngIf="human.type=='Proposal'">
+                            <mat-label style="color: white;">Start Date</mat-label>
+                            <input matInput [matDatepicker]="picker" style="color: white;" [(ngModel)]="human.startdate" formControlName="startdate">
+                            <mat-datepicker-toggle matSuffix [for]="picker" style="color: white;"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" *ngIf="human.type=='Proposal'">
+                            <mat-label style="color: white;">End Date</mat-label>
+                            <input matInput [matDatepicker]="picker" style="color: white;" [(ngModel)]="human.enddate" formControlName="enddate">
+                            <mat-datepicker-toggle matSuffix [for]="picker" style="color: white;"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label style="color: white;">Write Feedback/Proposal</mat-label>
+                            <textarea style="color: white;" matInput rows="4" [(ngModel)]="human.proposal" formControlName="proposal"></textarea>
+                        </mat-form-field>
+                        <button mat-raised-button class="uptop2" type="submit" [disabled]="!proposalForm.valid">
+                            <mat-icon aria-label="contact mail">contact_mail</mat-icon> Submit
+                        </button>
+                    </form>
                 </div>
             </div>
         </div> 

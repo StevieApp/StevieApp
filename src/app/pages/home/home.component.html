@@ -75,4 +75,10 @@
 <div style="max-width: 99vw; margin-top: 20px;">
     <mat-divider [inset]="true" style="margin-bottom: 20px;margin-right: 80px;"></mat-divider>
 </div>
-<app-contact></app-contact>
+<app-contact (newTitle)="updateTitle($event)"></app-contact>
+<div *ngIf="projectTitle=='Alibaba and the 40 Thieves'">
+    <div style="max-width: 99vw; margin-top: 20px;">
+        <mat-divider [inset]="true" style="margin-bottom: 20px;margin-right: 80px;"></mat-divider>
+    </div>
+</div>
+<app-upload-story *ngIf="projectTitle=='Alibaba and the 40 Thieves'"></app-upload-story>

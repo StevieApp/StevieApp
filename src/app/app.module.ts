@@ -22,8 +22,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UploadStoryComponent } from './pages/upload-story/upload-story.component';
+import { NgpImagePickerModule } from 'ngp-image-picker';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     InterestsComponent,
     SocialsComponent,
     TechnologiesComponent,
+    UploadStoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
+    NgpImagePickerModule,
     MatGridListModule,
     MatDividerModule,
     MatCardModule,
@@ -52,7 +55,8 @@ import { FormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     MatRippleModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,54 @@
+<div class="lessee" id="contacts">
+    <div style="position: relative;z-index: 100;margin-top: auto;">
+        <div class="container-fluid" style="min-height: 90vh;">
+            <div class="row" style="margin-bottom: 5vh;">
+                <div class="col-12 scali">
+                    <div style="text-align: center;">
+                        <h4 class="display-4" style="max-width: 100%;">Create Story</h4>
+                    </div>
+                    <form [formGroup]="createStoryForm" (validSubmit)="createstory()" novalidate>
+                        <ngp-image-picker [_imageSrc]="initialImage" [_config]="imagePickerConf" 
+                        ($imageChanged)="onImageChange($event)"></ngp-image-picker>
+                        <mat-form-field appearance="fill" [color]="'secondary'">
+                            <mat-label style="color: white;">Title</mat-label>
+                            <input matInput style="color: white;" [(ngModel)]="blog.Title" formControlName="title">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" style="color: white;">
+                            <mat-label style="color: white;">Topic</mat-label>
+                            <mat-select style="color: white;" [(ngModel)]="blog.Topic" formControlName="topic">
+                                <mat-option value="Coding" style="color: #65026e;">Coding</mat-option>
+                                <mat-option value="Anime" style="color: #65026e;">Anime</mat-option>
+                                <mat-option value="Animation" style="color: #65026e;">Animation</mat-option>
+                                <mat-option value="Movies" style="color: #65026e;">Movies</mat-option>
+                                <mat-option value="Music" style="color: #65026e;">Music</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" [color]="'secondary'">
+                            <mat-label style="color: white;">SubTopic</mat-label>
+                            <input matInput style="color: white;" [(ngModel)]="blog.SubTopic" formControlName="subtopic">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" [color]="'secondary'">
+                            <mat-label style="color: white;">Button Text</mat-label>
+                            <input matInput style="color: white;" [(ngModel)]="blog.ButtonText" formControlName="buttontext">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" [color]="'secondary'">
+                            <mat-label style="color: white;">Button Link</mat-label>
+                            <input matInput style="color: white;" [(ngModel)]="blog.ButtonLink" formControlName="buttonlink">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label style="color: white;">Story</mat-label>
+                            <textarea style="color: white;" matInput rows="4" [(ngModel)]="blog.story" formControlName="story"></textarea>
+                        </mat-form-field>
+                        <div [innerHTML]="blog.story" style="color: white;display: block;" class="coder">
+                            
+                        </div>
+                        <button mat-raised-button class="uptop2" type="submit" [disabled]="!createStoryForm.valid">
+                            <mat-icon aria-label="subject">subject</mat-icon> Create
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+

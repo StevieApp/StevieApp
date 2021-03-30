@@ -4,30 +4,30 @@
         Hybrid Applications (iOS, Android) using Ionic Framework. Mobile Applications (Android) using Java. 
         I also create logos using Adobe Photoshop and can animate them using Adobe Premiere.</h1>
     <div style="position: relative;z-index: 100;margin-top: auto;">
-            <div class="row" style="max-width: 100%;">
-                <div class="col-12 col-sm-4 col-md-4" *ngFor="let portfolio of portfolios">
-                    <mat-card class="example-card" style="opacity: .8; 
-                    background-image: linear-gradient(purple, purple, blue);
-                    color: white;font-weight: 300; margin-bottom: 10px;">
-                        <img mat-card-image src="{{portfolio.imageurl}}" class="fittings" height="200px">
-                        <mat-card-header>
-                            <!-- <div mat-card-avatar class="example-header-image"></div> -->
-                            <mat-card-title style="font-weight: 300;">{{portfolio.title}}</mat-card-title>
-                            <mat-card-subtitle style="color: white;">{{portfolio.type}}</mat-card-subtitle>
-                          </mat-card-header>
-                        <mat-card-content>
-                          <p>
-                            {{portfolio.description}}
-                          </p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <a href="{{portfolio.link}}" style="display: inline-block;" target="_blank">
-                                <button mat-button class="byoing">{{portfolio.text}}</button>
-                            </a>
-                        </mat-card-actions>
-                    </mat-card> 
-                </div>
+        <div class="row" style="max-width: 100%;">
+            <div class="col-12 col-sm-4 col-md-4" *ngFor="let portfolio of portfolios">
+                <mat-card class="example-card" style="opacity: .8; 
+                background-image: linear-gradient(purple, purple, blue);
+                color: white;font-weight: 300; margin-bottom: 10px;">
+                    <img mat-card-image src="{{portfolio.imageurl}}" class="fittings" height="200px">
+                    <mat-card-header>
+                        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                        <mat-card-title style="font-weight: 300;">{{portfolio.title}}</mat-card-title>
+                        <mat-card-subtitle style="color: white;">{{portfolio.type}}</mat-card-subtitle>
+                        </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                        {{portfolio.description}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <a href="{{portfolio.link}}" style="display: inline-block;" target="_blank">
+                            <button mat-button class="byoing">{{portfolio.text}}</button>
+                        </a>
+                    </mat-card-actions>
+                </mat-card> 
             </div>
+        </div>
     </div>
 </div>
 
