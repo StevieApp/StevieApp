@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-contact',
@@ -41,24 +41,21 @@ export class ContactComponent implements OnInit {
         Validators.maxLength(30),
       ]),
       projecttitle: new FormControl('',[
-        Validators.required,
         Validators.minLength(5),
         Validators.maxLength(30),
       ]),
       startdate: new FormControl('',[
-        Validators.required,
         Validators.minLength(5),
         Validators.maxLength(30),
       ]),
       enddate: new FormControl('',[
-        Validators.required,
         Validators.minLength(5),
         Validators.maxLength(30),
       ]),
       proposal: new FormControl('',[
         Validators.required,
         Validators.minLength(5),
-        Validators.maxLength(30),
+        Validators.maxLength(200),
       ]),
     });
   }

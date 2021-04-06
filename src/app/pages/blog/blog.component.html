@@ -3,6 +3,33 @@
         <h4 class="display-4" style="text-align: center;max-width: 97vw;">Blog</h4>
         <div class="container" style="min-height: 90vh;">
             <div class="row" style="margin-bottom: 5vh;">
+                <!-- <div *ngFor="let blog of blogs">
+                    <img src="https://us-central1-reaphoster.cloudfunctions.net/app/api/files/getfile?filename={{blog.imageURL}}.png"
+                    style="object-fit: contain;object-position: center;width: 100%;">
+                    <h1 style="color: white;" *ngIf="blog.Title && blog.Topic && !blog.SubTopic">{{blog.Topic }} > {{blog.Title}}</h1>
+                    <h1 style="color: white;" *ngIf="blog.Title && blog.Topic && blog.SubTopic">{{blog.Topic }} > {{blog.SubTopic }} > {{blog.Title}}</h1>
+                    <div [innerHTML]="blog.story" style="color: white;display: block;" class="coder">
+                    </div>
+                </div> -->
+                <mat-card style="padding: 10px; background: none; color: white; margin: 10px 0;max-height: 45vh; 
+                border: solid 1px white; overflow-y: hidden;overflow-x: hidden;" *ngFor="let blog of blogs">
+                        <img src="https://us-central1-reaphoster.cloudfunctions.net/app/api/files/getfile?filename={{blog.imageURL}}.png"
+                        style="object-fit: contain;object-position: center;width: 100%; max-height: 20vh;">
+                        <div>
+                            <h4 class="display-4">{{blog.title}}</h4>
+                            <div [innerHTML]="blog.story" style="display: block;" class="coder">
+                            </div>
+                            <div style="float: right;z-index: 1000;width: 87px;">
+                                <a href="{{blog.ButtonLink}}" class="hoverer" style="display: inline-block;" style="position: absolute;
+                                bottom: 0; float: right; text-decoration: none; color: white;">
+                                <!-- target="_blank" -->
+                                    <button mat-button class="byoing" style="background: #65026e;">{{blog.ButtonText}}</button>
+                                </a>
+                            </div>
+                        </div>
+                </mat-card>
+            </div>
+            <!-- <div class="row" style="margin-bottom: 5vh;">
                 <mat-card style="padding: 1px; margin: 10px 0;" *ngFor="let story of stories">
                     <div class="row">
                         <div class="col-12 col-sm-6">
@@ -19,14 +46,14 @@
                                     <a href="{{story.link}}" class="hoverer" style="display: inline-block;" style="position: absolute;
                                     bottom: 0; float: right; text-decoration: none; color: white;">
                                     <!-- target="_blank" -->
-                                        <button mat-button class="byoing" style="background: #65026e;">Read More</button>
+                                    <!-- <button mat-button class="byoing" style="background: #65026e;">Read More</button>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </mat-card>
-            </div>
+            </div> -->
         </div> 
     </div>
 </div>

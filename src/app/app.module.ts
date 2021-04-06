@@ -21,10 +21,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UploadStoryComponent } from './pages/upload-story/upload-story.component';
 import { NgpImagePickerModule } from 'ngp-image-picker';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { NgpImagePickerModule } from 'ngp-image-picker';
     MatNativeDateModule,
     MatRippleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
