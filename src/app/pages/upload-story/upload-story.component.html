@@ -6,7 +6,7 @@
                     <div style="text-align: center;">
                         <h4 class="display-4" style="max-width: 100%;">Create Story</h4>
                     </div>
-                    <form [formGroup]="createStoryForm" (validSubmit)="createstory()" novalidate>
+                    <form [formGroup]="createStoryForm" (ngSubmit)="createstory()" novalidate>
                         <ngp-image-picker [_imageSrc]="initialImage" [_config]="imagePickerConf" 
                         ($imageChanged)="onImageChange($event)"></ngp-image-picker>
                         <mat-form-field appearance="fill" [color]="'secondary'">
@@ -35,15 +35,49 @@
                             <mat-label style="color: white;">Button Link</mat-label>
                             <input matInput style="color: white;" [(ngModel)]="blog.ButtonLink" formControlName="buttonlink">
                         </mat-form-field>
+                        <mat-form-field appearance="fill" style="color: white;">
+                            <mat-label style="color: white;">Tags</mat-label>
+                            <mat-chip-list #chipList aria-label="Fruit selection">
+                              <mat-chip *ngFor="let tag of tags" [selectable]="selectable"
+                                       [removable]="removable" (removed)="remove(tag)" style="color: white;
+                                       background-color: #65026e;">
+                                {{tag}}
+                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                              </mat-chip>
+                              <input style="color: white;" placeholder="Add tag... (Press enter/space to add)"
+                                     [matChipInputFor]="chipList"
+                                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                     [matChipInputAddOnBlur]="addOnBlur"
+                                     (matChipInputTokenEnd)="add($event)">
+                            </mat-chip-list>
+                        </mat-form-field>
                         <mat-form-field appearance="fill">
                             <mat-label style="color: white;">Story</mat-label>
                             <textarea style="color: white;" matInput rows="4" [(ngModel)]="blog.story" formControlName="story"></textarea>
                         </mat-form-field>
-                        <div [innerHTML]="blog.story" style="color: white;display: block;" class="coder">
-                            
+                        <img [src]="meng" width="100%" *ngIf="meng!='../../../assets/stevieapp3.png'">
+                        <br>
+                        <div *ngIf="savingStory" class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+                                {{progress.percentage}}%</div>
                         </div>
-                        <button mat-raised-button class="uptop2" type="submit" [disabled]="!createStoryForm.valid">
-                            <mat-icon aria-label="subject">subject</mat-icon> Create
+                        <br><br>
+                        <h1 style="color: white;" *ngIf="blog.Title && blog.Topic && !blog.SubTopic">{{blog.Topic }} > {{blog.Title}}</h1>
+                        <h1 style="color: white;" *ngIf="blog.Title && blog.Topic && blog.SubTopic">{{blog.Topic }} > {{blog.SubTopic }} > {{blog.Title}}</h1>
+                        <div [innerHTML]="blog.story" style="color: white;display: block;" class="coder">
+                        </div>
+                        <div class="sk-folding-cube" *ngIf="savingStory">
+                            <div class="sk-cube1 sk-cube"></div>
+                            <div class="sk-cube2 sk-cube"></div>
+                            <div class="sk-cube4 sk-cube"></div>
+                            <div class="sk-cube3 sk-cube"></div>
+                        </div>
+                        <div *ngIf="myMessage" style="text-align: center;">
+                            <h2 [ngClass]="{'bluish': this.myMessage.includes('Saving...'),'greenish': this.myMessage.includes('saved'), 
+                                'redish':!(this.myMessage.includes('saved'))}">{{myMessage}}</h2>
+                        </div>
+                        <button type="submit" class="btn btn-primary" mat-raised-button *ngIf="!savingStory" class="uptop2" [disabled]="!createStoryForm.valid || meng=='../../../assets/stevieapp3.png'">
+                            <mat-icon aria-label="subject">subject</mat-icon> Create Story
                         </button>
                     </form>
                 </div>

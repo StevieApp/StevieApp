@@ -1,4 +1,6 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { BlogStoriesService } from 'src/app/services/blog-stories.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  constructor(private getBlogs: BlogStoriesService) { }
+
+  loading = false;
+  blogs: any;
 
   ngOnInit(): void {
+    this.getBlogs.getStories().subscribe(event=>{
+      this.loading = true;
+      if(event instanceof HttpResponse){
+        if(event.body?.toString().includes('No listings found')){
+          this.loading = false;
+        } else if(event.body?.toString().includes('could not retrieve results')) {
+          this.loading = false;
+        } else if(event.body?.toString()){
+          this.blogs = JSON.parse(event.body?.toString());
+          this.blogs.reverse();
+          this.loading = false;
+        }
+      }
+    }, err=>{
+      this.loading = false;
+    })  
   }
 
   stories=[
