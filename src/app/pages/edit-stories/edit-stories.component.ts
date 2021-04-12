@@ -6,6 +6,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { ActivatedRoute } from '@angular/router';
 import { CreateStoryService } from 'src/app/services/create-story.service';
 import { StoryService } from 'src/app/services/story.service';
+import { UpdateStoryService } from 'src/app/services/update-story.service';
 
 @Component({
   selector: 'app-edit-stories',
@@ -34,7 +35,8 @@ export class EditStoriesComponent implements OnInit {
   constructor(
     private saveBlog: CreateStoryService,
     private route: ActivatedRoute,
-    private getStory: StoryService
+    private getStory: StoryService,
+    private updateStory: UpdateStoryService
   ) {
     this.route.params.subscribe(params => {
       var emo = params;
@@ -61,8 +63,24 @@ export class EditStoriesComponent implements OnInit {
     }
   }
 
-  createstory(){
+  updatestory(id: any){
     this.savingStory = true;
+    if(this.imageFile){
+      this.updateStory.deletesingleFile(this.blog.imageURL+`.png`).subscribe(event => {
+        if (event instanceof HttpResponse) {
+          this.updatePhoto(id);
+        }
+      },err=>{
+        this.myMessage = "Could not delete photo!";
+        this.reset();
+      }); 
+    } else {  
+      this.savestory(id);
+    }
+    
+  }
+
+  updatePhoto(id: any){
     if(this.blog.SubTopic){
       this.blog.imageURL = 'StevieApp/Blog/'+this.blog.Topic+'/'+this.blog.SubTopic+'/'+this.blog.Title;
     } else {
@@ -76,7 +94,7 @@ export class EditStoriesComponent implements OnInit {
         if(event.body?.toString().includes('naming')){
           this.myMessage = "Photo saved!";
           setTimeout(()=>{
-            this.savestory();
+            this.savestory(id);
           }, 500);
         } else{
           this.myMessage = "Could not upload photo!";
@@ -89,20 +107,17 @@ export class EditStoriesComponent implements OnInit {
     })
   }
 
-  savestory(){
-    this.saveBlog.saveStory(this.blog).subscribe(event => {
+  savestory(id: any){
+    this.updateStory.updateUser(this.blog, id).subscribe(event => {
       if (event instanceof HttpResponse) {
         console.log(event.body?.toString());
-        if (event.body?.toString().includes('written')){
+        if(event.body?.toString().includes('Updated')){
           this.meng = "../../../assets/stevieapp3.png";
           document.getElementById('delete-img')?.click();
           this.blog = JSON.parse('{}')
-          this.myMessage = "Profile saved!";
+          this.myMessage = "Story updated and saved!";
           this.reset();
-        }else if(event.body?.toString().includes('write not done')){
-          this.myMessage = "Could not save profile!";
-          this.reset();
-        } else {
+        }else{
           this.myMessage = "Could not save profile!";
           this.reset();
         }

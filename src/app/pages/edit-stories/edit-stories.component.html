@@ -6,7 +6,7 @@
                     <div style="text-align: center;">
                         <h4 class="display-4" style="max-width: 100%;">Update Story</h4>
                     </div>
-                    <form [formGroup]="createStoryForm" (ngSubmit)="createstory()" novalidate>
+                    <form [formGroup]="createStoryForm" (ngSubmit)="updatestory(blog._id)" novalidate>
                         <ngp-image-picker [_imageSrc]="initialImage" [_config]="imagePickerConf" 
                         ($imageChanged)="onImageChange($event)"></ngp-image-picker>
                         <mat-form-field appearance="fill" [color]="'secondary'">
