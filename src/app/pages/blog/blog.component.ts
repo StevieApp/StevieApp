@@ -9,12 +9,17 @@ import { BlogStoriesService } from 'src/app/services/blog-stories.service';
 })
 export class BlogComponent implements OnInit {
 
-  constructor(private getBlogs: BlogStoriesService) { }
+  constructor(private getBlogs: BlogStoriesService) {
+    this.getAllBlogs();
+  }
 
   loading = false;
   blogs: any;
 
   ngOnInit(): void {
+  }
+
+  getAllBlogs(){
     this.getBlogs.getStories().subscribe(event=>{
       this.loading = true;
       if(event instanceof HttpResponse){

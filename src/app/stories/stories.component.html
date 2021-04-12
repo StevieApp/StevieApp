@@ -1,0 +1,22 @@
+<div class="lessee" id="mystory">
+    <div style="position: relative;z-index: 100;margin-top: auto;">
+        <div *ngIf="loading" style="height: 97vh; width: 100%;display: flex;">
+            <div style="margin: auto;">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="color: white; padding-bottom: 40px;" *ngIf="blog">
+            <h1 class="display-4" style="text-align: center;">{{blog.Title}}</h1>
+            <img src="https://us-central1-reaphoster.cloudfunctions.net/app/api/files/getfile?filename={{blog.imageURL}}.png"
+            style="object-fit: contain;object-position: center;width: 100%; max-height: 30vh;">
+            <div [innerHTML]="blog.story" style="display: block;" class="coder">
+            </div>
+        </div>
+    </div>
+</div>
+

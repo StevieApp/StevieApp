@@ -27,6 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UploadStoryComponent } from './pages/upload-story/upload-story.component';
 import { NgpImagePickerModule } from 'ngp-image-picker';
 import { HttpClientModule } from '@angular/common/http';
+import { StoriesComponent } from './stories/stories.component';
+import { EditStoriesComponent } from './pages/edit-stories/edit-stories.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     SocialsComponent,
     TechnologiesComponent,
     UploadStoryComponent,
+    StoriesComponent,
+    EditStoriesComponent,
   ],
   imports: [
     BrowserModule,
