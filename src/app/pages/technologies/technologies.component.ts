@@ -11,7 +11,7 @@ export class TechnologiesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   portfolios = [
     {
       imageurl: "../../../assets/reap.png",
