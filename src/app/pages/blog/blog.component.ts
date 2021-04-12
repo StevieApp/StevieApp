@@ -30,7 +30,9 @@ export class BlogComponent implements OnInit {
         } else if(event.body?.toString()){
           this.blogs = JSON.parse(event.body?.toString());
           this.blogs.reverse();
-          this.loading = false;
+          setTimeout(()=>{
+            this.loading = false;
+          }, 5000)
         }
       }
     }, err=>{
