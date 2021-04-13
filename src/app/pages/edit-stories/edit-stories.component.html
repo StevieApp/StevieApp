@@ -1,14 +1,24 @@
 <div class="lessee" id="contacts">
     <div style="position: relative;z-index: 100;margin-top: auto;">
-        <div class="container-fluid" style="min-height: 90vh;">
+        <div *ngIf="!blogs || loading" style="height: 97vh; width: 100%;display: flex;">
+            <div style="margin: auto;">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="min-height: 90vh;" *ngIf="blogs && !loading">
             <div class="row" style="margin-bottom: 5vh;">
                 <div class="col-12 scali">
                     <div style="text-align: center;">
                         <h4 class="display-4" style="max-width: 100%;">Update Story</h4>
                     </div>
-                    <form [formGroup]="createStoryForm" (ngSubmit)="updatestory(blog._id)" novalidate>
-                        <ngp-image-picker [_imageSrc]="initialImage" [_config]="imagePickerConf" 
+                    <ngp-image-picker [_imageSrc]="initialImage" [_config]="imagePickerConf" 
                         ($imageChanged)="onImageChange($event)"></ngp-image-picker>
+                    <form [formGroup]="createStoryForm" (ngSubmit)="updatestory(blog._id)" novalidate>
                         <mat-form-field appearance="fill" [color]="'secondary'">
                             <mat-label style="color: white;">Title</mat-label>
                             <input matInput style="color: white;" [(ngModel)]="blog.Title" formControlName="title">
@@ -76,7 +86,7 @@
                             <h2 [ngClass]="{'bluish': this.myMessage.includes('Saving...'),'greenish': this.myMessage.includes('saved'), 
                                 'redish':!(this.myMessage.includes('saved'))}">{{myMessage}}</h2>
                         </div>
-                        <button type="submit" class="btn btn-primary" mat-raised-button *ngIf="!savingStory" class="uptop2" [disabled]="!createStoryForm.valid || meng=='../../../assets/stevieapp3.png' || blog == previousblog">
+                        <button type="submit" class="btn btn-primary" mat-raised-button *ngIf="!savingStory" class="uptop2" [disabled]="(!createStoryForm.valid || meng=='../../../assets/stevieapp3.png' || returnJSONblog()) && !imageFile">
                             <mat-icon aria-label="subject">subject</mat-icon> Update Story
                         </button>
                     </form>

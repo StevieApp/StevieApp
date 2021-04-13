@@ -6,9 +6,9 @@
                     <div style="text-align: center;">
                         <h4 class="display-4" style="max-width: 100%;">Create Story</h4>
                     </div>
+                    <ngp-image-picker [_imageSrc]="initialImage" [_config]="imagePickerConf" 
+                        ($imageChanged)="onImageChange($event)" *ngIf="!savingStory"></ngp-image-picker>
                     <form [formGroup]="createStoryForm" (ngSubmit)="createstory()" novalidate>
-                        <ngp-image-picker [_imageSrc]="initialImage" [_config]="imagePickerConf" 
-                        ($imageChanged)="onImageChange($event)"></ngp-image-picker>
                         <mat-form-field appearance="fill" [color]="'secondary'">
                             <mat-label style="color: white;">Title</mat-label>
                             <input matInput style="color: white;" [(ngModel)]="blog.Title" formControlName="title">
@@ -51,10 +51,6 @@
                                      (matChipInputTokenEnd)="add($event)">
                             </mat-chip-list>
                         </mat-form-field>
-                        <mat-form-field appearance="fill">
-                            <mat-label style="color: white;">Story</mat-label>
-                            <textarea style="color: white;" matInput rows="4" [(ngModel)]="blog.story" formControlName="story"></textarea>
-                        </mat-form-field>
                         <img [src]="meng" width="100%" *ngIf="meng!='../../../assets/stevieapp3.png'">
                         <br>
                         <div *ngIf="savingStory" class="progress">
@@ -66,6 +62,10 @@
                         <h1 style="color: white;" *ngIf="blog.Title && blog.Topic && blog.SubTopic">{{blog.Topic }} > {{blog.SubTopic }} > {{blog.Title}}</h1>
                         <div [innerHTML]="blog.story" style="color: white;display: block;" class="coder">
                         </div>
+                        <mat-form-field appearance="fill">
+                            <mat-label style="color: white;">Story</mat-label>
+                            <textarea style="color: white;" matInput rows="4" [(ngModel)]="blog.story" formControlName="story"></textarea>
+                        </mat-form-field>
                         <div class="sk-folding-cube" *ngIf="savingStory">
                             <div class="sk-cube1 sk-cube"></div>
                             <div class="sk-cube2 sk-cube"></div>
