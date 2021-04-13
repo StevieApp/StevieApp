@@ -29,6 +29,7 @@ import { NgpImagePickerModule } from 'ngp-image-picker';
 import { HttpClientModule } from '@angular/common/http';
 import { StoriesComponent } from './stories/stories.component';
 import { EditStoriesComponent } from './pages/edit-stories/edit-stories.component';
+import { AdsenseModule } from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,11 @@ import { EditStoriesComponent } from './pages/edit-stories/edit-stories.componen
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatChipsModule
+    MatChipsModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7472597196511498',
+      //adSlot: 7259870550,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

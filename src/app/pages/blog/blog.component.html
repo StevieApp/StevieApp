@@ -22,8 +22,9 @@
                         <div [innerHTML]="blog.story" style="color: white;display: block;" class="coder">
                         </div>
                     </div> -->
-                    <mat-card style="padding: 10px; background: none; color: white; margin: 10px 0;max-height: 45vh; 
-                    border: solid 1px white; overflow-y: hidden;overflow-x: hidden;" *ngFor="let blog of blogs">
+                    <div *ngFor="let blog of blogs; let i = index">
+                        <mat-card style="padding: 10px; background: none; color: white; margin: 10px 0;max-height: 45vh; 
+                        border: solid 1px white; overflow-y: hidden;overflow-x: hidden;" >
                             <img src="https://us-central1-reaphoster.cloudfunctions.net/app/api/files/getfile?filename={{blog.imageURL}}.png"
                             style="object-fit: contain;object-position: center;width: 100%; max-height: 20vh;">
                             <div>
@@ -39,7 +40,24 @@
                                     </a>
                                 </div>
                             </div>
-                    </mat-card>
+                        </mat-card>
+                        <div *ngIf="i==0 || (i%0)==0">
+                            <!-- <ng-adsense
+                            [adClient]="'ca-pub-7472597196511498'"
+                            [display]="'block'"
+                            [adSlot]="6102238645"
+                            [adFormat]="'auto'"
+                            [fullWidthResponsive]="true"
+                            ></ng-adsense> -->
+                            <ng-adsense
+                            [adClient]="'ca-pub-7472597196511498'"
+                            [display]="'in-article'"
+                            [adSlot]="2577942511"
+                            [adFormat]="'fluid'"
+                            [fullWidthResponsive]="true"
+                            ></ng-adsense>
+                        </div>
+                    </div> 
                 </div>
             </div> 
         </div>
