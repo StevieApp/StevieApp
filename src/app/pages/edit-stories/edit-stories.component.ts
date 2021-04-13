@@ -3,7 +3,7 @@ import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CreateStoryService } from 'src/app/services/create-story.service';
 import { StoryService } from 'src/app/services/story.service';
 import { UpdateStoryService } from 'src/app/services/update-story.service';
@@ -31,6 +31,7 @@ export class EditStoriesComponent implements OnInit {
   myMessage: any;
   loading: any;
   blogs: any;
+  emo: any;
 
   constructor(
     private saveBlog: CreateStoryService,
@@ -38,9 +39,9 @@ export class EditStoriesComponent implements OnInit {
     private getStory: StoryService,
     private updateStory: UpdateStoryService
   ) {
-    this.route.params.subscribe(params => {
-      var emo = params;
-      this.getBlog(emo);
+      this.route.params.subscribe(params => {
+      this.emo = params;
+      this.getBlog(this.emo);
     });
   }
 
@@ -108,15 +109,21 @@ export class EditStoriesComponent implements OnInit {
   }
 
   savestory(id: any){
-    this.updateStory.updateUser(this.blog, id).subscribe(event => {
+    var incomplete = JSON.parse(JSON.stringify(this.blog));
+    delete incomplete['_id'];
+    this.updateStory.updateUser(incomplete, id).subscribe(event => {
       if (event instanceof HttpResponse) {
-        console.log(event.body?.toString());
+        //console.log(event.body?.toString());
         if(event.body?.toString().includes('Updated')){
           this.meng = "../../../assets/stevieapp3.png";
           document.getElementById('delete-img')?.click();
           this.blog = JSON.parse('{}')
           this.myMessage = "Story updated and saved!";
           this.reset();
+          this.imageFile=undefined;
+          setTimeout(()=>{
+            this.getBlog(this.emo);
+          }, 2100);
         }else{
           this.myMessage = "Could not save profile!";
           this.reset();
@@ -237,6 +244,7 @@ export class EditStoriesComponent implements OnInit {
           this.blogs = JSON.parse(event.body?.toString());
           this.blog = this.blogs[0];
           this.previousblog = JSON.parse(JSON.stringify(this.blog));
+          //console.log(this.blog===this.previousblog);
           this.meng = this.blogs.imageURL;
           this.initialImage = `https://us-central1-reaphoster.cloudfunctions.net/app/api/files/getfile?filename=`+this.blog.imageURL+`.png`;
           this.loading = false;
@@ -245,6 +253,10 @@ export class EditStoriesComponent implements OnInit {
     }, err=>{
       this.loading = false;
     })
+  }
+
+  returnJSONblog(){
+    return JSON.stringify(this.blog) === JSON.stringify(this.previousblog);
   }
 
 }

@@ -22,8 +22,8 @@ export class UpdateStoryService {
   updateUser(user: any, id: any): Observable<HttpEvent<{}>> {
  
     const params = new HttpParams()
-      .set('dbname', 'reap')
-      .set('collection', 'users')
+      .set('dbname', 'stevieapp')
+      .set('collection', 'stories')
       .set('id', id);
  
     const req = new HttpRequest('POST', 'https://us-central1-reaphoster.cloudfunctions.net/app/api/mongo/userupdate', user, {

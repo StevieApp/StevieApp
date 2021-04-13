@@ -82,13 +82,13 @@ export class UploadStoryComponent implements OnInit {
   savestory(){
     this.saveBlog.saveStory(this.blog).subscribe(event => {
       if (event instanceof HttpResponse) {
-        console.log(event.body?.toString());
+        //console.log(event.body?.toString());
         if (event.body?.toString().includes('written')){
-          this.meng = "../../../assets/stevieapp3.png";
           document.getElementById('delete-img')?.click();
           this.blog = JSON.parse('{}')
-          this.myMessage = "Profile saved!";
+          this.myMessage = "Story saved!";
           this.tags = ['StevieApp'];
+          this.meng = "../../../assets/stevieapp3.png";
           this.reset();
         }else if(event.body?.toString().includes('write not done')){
           this.myMessage = "Could not save profile!";
