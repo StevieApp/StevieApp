@@ -59,7 +59,7 @@
  */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
-
+// adsbygoogle =  window.adsbygoogle || []
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */

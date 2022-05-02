@@ -25,6 +25,32 @@
                     <div *ngFor="let blog of blogs; let i = index">
                         <mat-card style="padding: 10px; background: none; color: white; margin: 10px 0;max-height: 45vh; 
                         border: solid 1px white; overflow-y: hidden;overflow-x: hidden;" >
+                        <div style="width: 250px;">
+                        <ng-adsense
+                        [adClient]="'ca-pub-7472597196511498'"
+                        [display]="'in-article'"
+                        [adSlot]="2577942511"
+                        [adFormat]="'fluid'"
+                        [fullWidthResponsive]="true"
+                        [height]="250"
+                        [width]="600"
+                        [display]="'block'"
+                        [fullWidthResponsive]="true"
+                        ></ng-adsense>
+                        </div>
+                        <ins class="adsbygoogle"
+                        style="display:block; text-align:center;"
+                        data-ad-layout="in-article"
+                        data-ad-format="fluid"
+                        data-ad-client="ca-pub-7472597196511498"
+                        data-ad-slot="2577942511"></ins>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-7472597196511498"
+                            data-ad-slot="2598107901"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                             <img src="https://us-central1-reaphoster.cloudfunctions.net/app/api/files/getfile?filename={{blog.imageURL}}.png"
                             style="object-fit: contain;object-position: center;width: 100%; max-height: 20vh;">
                             <div>
@@ -41,7 +67,7 @@
                                 </div>
                             </div>
                         </mat-card>
-                        <div *ngIf="i==0 || (i%0)==0">
+                        <mat-card height="1000px" width="1000px">
                             <!-- <ng-adsense
                             [adClient]="'ca-pub-7472597196511498'"
                             [display]="'block'"
@@ -55,8 +81,10 @@
                             [adSlot]="2577942511"
                             [adFormat]="'fluid'"
                             [fullWidthResponsive]="true"
+                            [height]="250"
+                            [width]="600"
                             ></ng-adsense>
-                        </div>
+                        </mat-card>
                     </div> 
                 </div>
             </div> 
