@@ -22,7 +22,7 @@
                         <h4 class="display-4" style="max-width: 100%;">Feedback/ Proposal</h4>
                     </div>
                     <form [formGroup]="proposalForm" (validSubmit)="createproposal()" novalidate>
-                        <mat-form-field appearance="fill" [color]="'secondary'">
+                        <mat-form-field appearance="fill" [color]="'accent'">
                             <mat-label style="color: white;">Name</mat-label>
                             <input matInput style="color: white;" [(ngModel)]="human.name" formControlName="name">
                         </mat-form-field>
@@ -33,7 +33,7 @@
                                 <mat-option value="Feedback" style="color: #65026e;">Feedback</mat-option>
                             </mat-select>
                         </mat-form-field>
-                        <mat-form-field appearance="fill" [color]="'secondary'" *ngIf="human.type=='Proposal'">
+                        <mat-form-field appearance="fill" [color]="'accent'" *ngIf="human.type=='Proposal'">
                             <mat-label style="color: white;">Project Title</mat-label>
                             <input matInput style="color: white;" [(ngModel)]="human.projectTitle" formControlName="projecttitle"
                             (change)="updateTitle(human.projectTitle)">
