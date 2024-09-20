@@ -5,6 +5,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import {COMMA, ENTER, SPACE} from '@angular/cdk/keycodes';
 import { CreateStoryService } from 'src/app/services/create-story.service';
 
+
 @Component({
   selector: 'app-upload-story',
   templateUrl: './upload-story.component.html',
@@ -59,7 +60,7 @@ export class UploadStoryComponent implements OnInit {
       this.blog.imageURL = 'StevieApp/Blog/'+this.blog.Topic+'/'+this.blog.Title;
     }
     this.saveBlog.saveImage(this.imageFile, null, this.blog.imageURL
-    ).subscribe(event => {
+    ).subscribe((event: any ) => {
       if (event.type === HttpEventType.UploadProgress) {
         this.progress.percentage = Math.round(100 * event.loaded / (event.total as number));
       } else if (event instanceof HttpResponse) {
@@ -73,14 +74,14 @@ export class UploadStoryComponent implements OnInit {
           this.reset();
         }
       }
-    }, err=>{
+    }, (err: any)=>{
       this.myMessage = "Network Issue!";
       this.reset();
     })
   }
 
   savestory(){
-    this.saveBlog.saveStory(this.blog).subscribe(event => {
+    this.saveBlog.saveStory(this.blog).subscribe((event: any) => {
       if (event instanceof HttpResponse) {
         //console.log(event.body?.toString());
         if (event.body?.toString().includes('written')){
@@ -98,7 +99,7 @@ export class UploadStoryComponent implements OnInit {
           this.reset();
         }
       }
-    }, err=>{
+    }, (err: any)=>{
       this.myMessage = "Network Issue!";
       this.reset();
     })

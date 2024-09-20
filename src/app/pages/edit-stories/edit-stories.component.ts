@@ -39,7 +39,7 @@ export class EditStoriesComponent implements OnInit {
     private getStory: StoryService,
     private updateStory: UpdateStoryService
   ) {
-      this.route.params.subscribe(params => {
+      this.route.params.subscribe((params:any) => {
       this.emo = params;
       this.getBlog(this.emo);
     });
