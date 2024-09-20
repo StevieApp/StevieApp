@@ -14,12 +14,20 @@ export class TechnologiesComponent implements OnInit {
   
   portfolios = [
     {
+      imageurl: "../../../assets/devmotors.png",
+      title: "DevMotors",
+      type: "Vehicle Management",
+      description: "Sample Vehicle Management System for Enthusiasts, Sales People, Car Show Rooms among other car dealership Companies with a fully functional Desktop, Mobile and Web Application. Using Ionic(Angular), NodeJS, Firestore, Cloud Functions",
+      text: "Visit",
+      link: "https://devmotors-254.web.app/downloads"
+    },
+    {
       imageurl: "../../../assets/reap.png",
       title: "Reap Web",
       type: "E-commerce",
-      description: "Trading and Information platform for Farmers. Grocery shop for buyers. Using NodeJS, MongoDB (Admin and Pipelines), AWS Architecture (EC2, Loadbalancer), CloudFunctions, AngularJS",
+      description: "(Closed)Trading and Information platform for Farmers. Grocery shop for buyers. Using NodeJS, MongoDB (Admin and Pipelines), AWS Architecture (EC2, Loadbalancer), Cloud Functions, AngularJS",
       text: "Visit",
-      link: "https://reapweb.com"
+      link: "https://reaphoster.web.app"
     },
     {
       imageurl: "../../../assets/eventer.png",
