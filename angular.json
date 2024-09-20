@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "0f63f87d-dcdf-4d7c-b54b-25c606f46811"
+    "analytics": "0f63f87d-dcdf-4d7c-b54b-25c606f46811",
+    "cache": {
+      "enabled": false
+    }
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -21,7 +24,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
             "outputPath": "dist/StevieAppWeb",
             "index": "src/index.html",
@@ -72,18 +75,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "StevieAppWeb:build"
+            "buildTarget": "StevieAppWeb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "StevieAppWeb:build:production"
+              "buildTarget": "StevieAppWeb:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "StevieAppWeb:build"
+            "buildTarget": "StevieAppWeb:build"
           }
         },
         "test": {
