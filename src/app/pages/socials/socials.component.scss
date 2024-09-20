@@ -103,15 +103,19 @@
 
 @keyframes uptoping{
     50% {
+        opacity: 1;
         transform: scale(1, 1);
     }
     70%{
+        opacity: 0;
         transform: scale(.1, 1.5);
     }
     75% {
+        opacity: 0;
         transform: translate(10px, 0);
     }
     100% {
+        opacity: 1;
         transform: scale(1, 1);
     }
 }
