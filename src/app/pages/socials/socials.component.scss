@@ -102,8 +102,12 @@
 }
 
 @keyframes uptoping{
-    50% {
+    0% {
         opacity: 1;
+        transform: scale(1, 1);
+    }
+    60% {
+        opacity: 0;
         transform: scale(1, 1);
     }
     70%{
@@ -111,13 +115,17 @@
         transform: scale(.1, 1.5);
     }
     75% {
-        opacity: 0;
+        opacity: 0.5;
         transform: translate(10px, 0);
     }
     100% {
         opacity: 1;
         transform: scale(1, 1);
     }
+}
+
+.fc-white, .fc-white:hover, .fc-white:focus, .fc-white:focus-within{
+    color: white !important;
 }
 
 a{

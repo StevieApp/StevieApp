@@ -73,15 +73,46 @@
 }
 
 .bott{
-    position: absolute;
+    // position: absolute;
     z-index: 1000;
     right: 0;
-    bottom: 0;
+    position: fixed;
+    // bottom: 90px;
+    top: 85vh;
     background: none;
     margin-right: 30px;
-    margin-bottom: 30px;
-    color: purple;
-    margin-right: 10px;
+    // margin-bottom: 20px;
+    // margin-right: 10px;
+    animation: ring .5s infinite;
+}
+
+.ringer{
+    background: none;
+    border: solid 2px purple;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+        // box-shadow: 0 0 0px rgba(52, 152, 219, 0.5);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+        // box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    }
+    100% {
+        transform: rotate(0deg);
+        // box-shadow: 0 0 0px rgba(52, 152, 219, 0.5);
+    }
 }
 
 mat-sidenav{
@@ -157,7 +188,7 @@ mat-sidenav{
 
 /* Track */
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 1px;
 }
@@ -165,22 +196,36 @@ mat-sidenav{
 
 /* Handle */
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 1px;
 }
 
-
 /* Handle on hover */
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
 mat-sidenav mat-list mat-list-item{
-    color: #7CE2FC;
-    width: 100%;
-    text-align: center;
+    cursor: pointer;
+    height: 60px;
+}
+
+mat-sidenav mat-list mat-list-item p{
+    color: #7CE2FC !important;
+    width: 100% !important;
+    text-align: center !important;
+    cursor: pointer;
+}
+
+.button-nav{
+    height: 40px;
+}
+
+.nobg mat-grid-list{
+    width: 250px;
+    height: 60px;
 }
 
 .nobg{
