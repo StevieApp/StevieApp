@@ -4,8 +4,9 @@
     font-family:agency fb;font-style:normal;font-weight:400;
     src:local('Agency FB'),
     local('AgencyFB-Regular'),
-    url('https://allfont.net/cache/fonts/agency-fb_0b9596562659a0772f5e24c22cae921b.woff') format('woff'),
-    url('https://allfont.net/cache/fonts/agency-fb_0b9596562659a0772f5e24c22cae921b.ttf') format('truetype')}
+    url('assets/AgencyFB.woff2') format('woff2'),
+    url('assets/AgencyFB.woff') format('woff'),
+    url('assets/AgencyFB.ttf') format('truetype')}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -106,5 +107,314 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         -webkit-transform: perspective(140px) rotateY(180deg);
         transform: perspective(140px) rotateY(180deg);
         opacity: 0; 
+    }
+}
+
+@keyframes gradient-border-move {
+    0% {
+        box-shadow: 0 0 0 2px #7CE2FC, /* Red */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    6.25% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Orange */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    12.5% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Yellow */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    18.75% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Green */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    25% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Blue */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    31.25% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Indigo */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    37.5% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Violet */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    43.75% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Red */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    50% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Orange */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    56.25% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Yellow */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    62.5% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Green */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    68.75% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Blue */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    75% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Indigo */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    81.25% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Violet */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    87.5% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Red */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    93.75% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC, /* Orange */
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent;
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 0 transparent,
+                    0 0 0 2px #7CE2FC; /* Yellow */
     }
 }

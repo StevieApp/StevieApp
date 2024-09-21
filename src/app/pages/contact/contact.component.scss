@@ -12,7 +12,7 @@
 }
 
 .whole{
-    height: 100vh;
+    height: 101vh;
     background-image: linear-gradient(purple, purple, blue);
 }
 
@@ -299,4 +299,26 @@ mat-select{
 
 mat-form-field{
     width: 100%;
+}
+
+.twink {
+    // background-color: var(--ion-color-light);
+    width: 40px;
+    height: 40px;
+    padding-top: .5rem;
+    border-radius: 50%;
+    border: solid 2px transparent;
+    text-align: center;
+    // box-shadow: 0 0 0 2px rgba(255, 0, 0);
+    animation: gradient-border-move 10s infinite linear;
+}
+
+.twink:hover {
+    transform: scale(1.05);
+    animation: gradient-border-move 4s infinite linear;
+}
+
+
+.twink:active {
+    transform: scale(1.06);
 }
