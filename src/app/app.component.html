@@ -5,9 +5,11 @@
 </a>
 <mat-sidenav-container [hasBackdrop]="true" class="whole">
     <mat-sidenav #drawer id="leftdraw" class="widthing">
-        <button mat-button class="nobg" style="outline: none; height: 250px;" (click)="drawer.toggle()" routerLink="/home">
-            <img mat-button src="../assets/MyImage0.png" height="200px" width="200px" class="imagemine">
-        </button>
+        <a href="/home#home">
+            <button mat-button class="nobg" style="outline: none; height: 250px;" (click)="drawer.toggle()">
+                <img mat-button src="../assets/MyImage0.png" height="200px" width="200px" class="imagemine">
+            </button>
+        </a>
         <mat-list>
             <a href="/home#home">
                 <button mat-button class="nobg" (click)="drawer.toggle()" routerLink="/home#home">
@@ -75,9 +77,11 @@
         </mat-list>
     </mat-sidenav>
     <mat-sidenav position="end" #ender id="rightdraw" class="widthing">
-        <button mat-button class="nobg" style="outline: none;height: 250px;" (click)="ender.toggle()" routerLink="/blog">
-            <img mat-button src="../assets/stevieapp3.png" height="100px" width="200px" class="imagemine2">
-        </button>
+        <a href="/home#home">
+            <button mat-button class="nobg" style="outline: none;height: 250px;" (click)="ender.toggle()" >
+                <img mat-button src="../assets/stevieapp3.png" height="100px" width="200px" class="imagemine2">
+            </button>
+        </a>
         <mat-list>
             <a href="https://stevieapp.blogspot.com/" target="_blank">
                 <button mat-button class="nobg" (click)="ender.toggle()">
