@@ -78,7 +78,7 @@
     right: 0;
     position: fixed;
     // bottom: 90px;
-    top: 85vh;
+    top: 77vh;
     background: none;
     margin-right: 30px;
     // margin-bottom: 20px;
@@ -87,8 +87,8 @@
 }
 
 @media (min-width: 600px) {
-    bott {
-        top: 65vh;
+    .bott {
+        top: 85vh;
     }
 }
 
