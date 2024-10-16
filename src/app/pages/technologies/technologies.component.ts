@@ -14,9 +14,17 @@ export class TechnologiesComponent implements OnInit {
   
   portfolios = [
     {
+      imageurl: "../../../assets/chester-auto.png",
+      title: "Chester Auto",
+      type: "Shop E-Commerce",
+      description: "Shop E-commerce for Chester Auto in Nakuru for display of products and services. Using Ionic(Angular), NodeJS, Firestore, Cloud Functions",
+      text: "Visit",
+      link: "https://chester-auto.web.app/"
+    },
+    {
       imageurl: "../../../assets/devmotors.png",
       title: "DevMotors",
-      type: "Vehicle Management",
+      type: "Vehicle E-Commerce",
       description: "Sample Vehicle Management System for Enthusiasts, Sales People, Car Show Rooms among other car dealership Companies with a fully functional Desktop, Mobile and Web Application. Using Ionic(Angular), NodeJS, Firestore, Cloud Functions",
       text: "Visit",
       link: "https://devmotors-254.web.app/downloads"
