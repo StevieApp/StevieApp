@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-interests',
   templateUrl: './interests.component.html',
-  styleUrls: ['./interests.component.scss']
+  styleUrls: ['./interests.component.scss'],
+  standalone: false,
 })
 export class InterestsComponent implements OnInit {
 

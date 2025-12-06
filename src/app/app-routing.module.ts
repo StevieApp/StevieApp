@@ -10,6 +10,7 @@ import { TechnologiesComponent } from './pages/technologies/technologies.compone
 import { UploadStoryComponent } from './pages/upload-story/upload-story.component';
 import { StoriesComponent } from './stories/stories.component';
 import { TeachieAppPrivacyPolicyComponent } from './pages/teachie-app-privacy-policy/teachie-app-privacy-policy.component';
+import { AppPrivacyPolicyComponent } from './pages/app-privacy-policy/app-privacy-policy.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   // { path: 'stories/:Title', component: StoriesComponent },
   // { path: 'editstories/:Title', component: EditStoriesComponent },
   { path: 'teachie-app-privacy-policy', component: TeachieAppPrivacyPolicyComponent },
+  { path: 'app-privacy-policy', component: AppPrivacyPolicyComponent },
 ];
 
 @NgModule({

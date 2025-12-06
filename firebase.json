@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "./dist/StevieAppWeb",
+    "site": "stevieapp254",
     "ignore": [
       "firebase.json",
       "**/.*",

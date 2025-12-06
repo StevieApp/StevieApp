@@ -11,7 +11,8 @@ import { UpdateStoryService } from 'src/app/services/update-story.service';
 @Component({
   selector: 'app-edit-stories',
   templateUrl: './edit-stories.component.html',
-  styleUrls: ['./edit-stories.component.scss']
+  styleUrls: ['./edit-stories.component.scss'],
+  standalone: false,
 })
 export class EditStoriesComponent implements OnInit {
 

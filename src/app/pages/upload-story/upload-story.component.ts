@@ -1,7 +1,7 @@
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatChipInputEvent } from '@angular/material/chips';
+import { MatChipInputEvent } from '@angular/material/types/chips';
 import {COMMA, ENTER, SPACE} from '@angular/cdk/keycodes';
 import { CreateStoryService } from 'src/app/services/create-story.service';
 
@@ -9,7 +9,8 @@ import { CreateStoryService } from 'src/app/services/create-story.service';
 @Component({
   selector: 'app-upload-story',
   templateUrl: './upload-story.component.html',
-  styleUrls: ['./upload-story.component.scss']
+  styleUrls: ['./upload-story.component.scss'],
+  standalone: false,
 })
 export class UploadStoryComponent implements OnInit {
 

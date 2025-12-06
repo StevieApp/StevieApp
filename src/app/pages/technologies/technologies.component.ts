@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-technologies',
   templateUrl: './technologies.component.html',
-  styleUrls: ['./technologies.component.scss']
+  styleUrls: ['./technologies.component.scss'],
+  standalone: false,
 })
 export class TechnologiesComponent implements OnInit {
 

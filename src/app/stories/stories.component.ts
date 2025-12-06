@@ -1,24 +1,25 @@
-import { HttpResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { HttpResponse } from '@angular/common/types/http';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StoryService } from '../services/story.service';
 
 @Component({
   selector: 'app-stories',
   templateUrl: './stories.component.html',
-  styleUrls: ['./stories.component.scss']
+  styleUrls: ['./stories.component.scss'],
+  standalone: false,
 })
 export class StoriesComponent implements OnInit {
 
   loading:any;
   blogs: any;
   blog: any;
+  routeactive: ActivatedRoute = inject(ActivatedRoute);
 
   constructor(
-    private route: ActivatedRoute,
     private getStory: StoryService
   ) {
-    this.route.params.subscribe(params => {
+    this.routeactive.params.subscribe(params => {
       var emo = params;
       this.getBlog(emo);
     });
