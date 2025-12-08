@@ -6,10 +6,11 @@ import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { MatIcon } from '@angular/material/icon';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { Contact } from "../contact/contact";
+import { DesignImages } from "../design-images/design-images";
 
 @Component({
   selector: 'app-home',
-  imports: [MatDivider, Socials, Technologies, MatGridTile, MatIcon, MatGridList, MatButtonModule, Contact],
+  imports: [MatDivider, Socials, Technologies, MatGridTile, MatIcon, MatGridList, MatButtonModule, Contact, DesignImages],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

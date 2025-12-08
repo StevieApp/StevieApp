@@ -1,0 +1,45 @@
+.rightee{
+  float: right;
+  right: 0;
+}
+
+.widthing{
+  width: 250px;
+}
+
+.rotation{
+  transform: rotate(180deg)
+}
+
+.whole{
+  height: 101vh;
+}
+
+.lessee {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.lessee::before {
+  content: "";
+  background-image: url('/assets/board-1709188.png');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.display-4{
+  font-weight: 300;
+  font-size: 70px;
+  color: white;
+  line-height: 1.2;
+  margin-left: 10px;
+  font-family: 'Agency FB', arial;
+  color: #65026e;
+}
