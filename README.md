@@ -1,59 +1,59 @@
-<img src="https://stevieapp254.web.app/assets/stevieappscreen.png" style="object-position:center; object-fit:cover; border-radius:10px" width="100%">
+# StevieApp
 
-### Hi, I'm Steve Nginyo 👋.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
-### I seek to provide efficient and reliable systems while solving user problems as per the requirements.
+## Development server
 
-I have ventured into BackEnd and FrontEnd (FullStack Development)<br>
-However, I also animate logos using Adobe Premiere as well as create them using Photoshop. I'm also into CyberSecurity, on the Ethical Hacking and Pentesting aspects.
+To start a local development server, run:
 
-### Here is a link to my website
-<a href="https://stevieapp254.web.app/" target="_blank">
-  <img align="left" alt="StevieApp" width="22px" src="https://stevieapp254.web.app/assets/stevieapp2.png" />
-  StevieApp
-</a>
-<br>
+```bash
+ng serve
+```
 
-### Also find me on 
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-<a href="https://www.youtube.com/channel/UCMgSZTdAgGxqPbtkUm7VhCg" target="_blank">
-  <img align="left" alt="StevieApp | Youtube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />
-</a>
-<a href="https://www.linkedin.com/in/steve-njoroge-3607a7139/" target="_blank">
-  <img align="left" alt="Steve Nginyo | Linkedin" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
-</a>
+## Code scaffolding
 
-<a href="https://www.instagram.com/stevenginyo/" target="_blank">
-  <img align="left" alt="Steve Nginyo | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
-</a>
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-<br>
+```bash
+ng generate component component-name
+```
 
-### - Languages and Tools...
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/languages/html.svg" alt="html" style="vertical-align:top; margin:4px">    
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/languages/js.svg" alt="js" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/languages/python.svg" alt="python" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/misc/chrome.svg" alt="chrome" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/misc/cloud.svg" alt="cloud" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/misc/datascience.svg" alt="datascience" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/services/aws.svg" alt="aws" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/services/npm.svg" alt="npm" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/services/gcp.svg" alt="gcp" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/tools/bash.svg" alt="bash" style="vertical-align:top; margin:4px">
-    <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/tools/visualstudio_code.svg" alt="vscode" style="vertical-align:top; margin:4px">
-  <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon-by-vexels.png" alt="java"         style="vertical-align:top; margin:4px" height="50px" height="width:50px;">
-</p>
+```bash
+ng generate --help
+```
 
-### - Website 📟 & Blog 🌱
+## Building
 
-<a align="center" href="https://stevieapp254.web.app" target="_blank">
-<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="200px" > 
-</a>
+To build the project run:
 
-### - Youtube 🎬
+```bash
+ng build
+```
 
-<a align="center" href="https://www.youtube.com/channel/UCMgSZTdAgGxqPbtkUm7VhCg" target="_blank">
-<img src="https://stevieapp254.web.app/assets/stevieapp4.png" width="200px"> 
-</a>
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
