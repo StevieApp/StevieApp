@@ -52,7 +52,7 @@
 
 .lessee::before {
   content: "";
-  background-image: url('/assets/board-1709188.png');
+  /* background-image: url('/assets/board-1709188.png'); */
   background-size: cover;
   position: absolute;
   top: 0px;

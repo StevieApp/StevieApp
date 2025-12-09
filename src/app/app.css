@@ -285,3 +285,24 @@ mat-divider{
 code::deep{
   background: blue;
 }
+
+.lessee {
+  position: relative;
+  /* //height: 100vh; */
+  width: 100%;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.lessee::before {
+  content: "";
+  /* background-image: url('/assets/board-1709188.png'); */
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}

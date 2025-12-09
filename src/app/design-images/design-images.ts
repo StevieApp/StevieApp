@@ -31,6 +31,8 @@ export class DesignImages {
     { title: 'SKATERENA', thumbNailUrl: '/assets/designs/thumbs/Skate wt-01.png', imageUrl: '/assets/designs/Skate wt-01.png', type: 'Banner', description: 'A vibrant banner design for SKATERENA, showcasing dynamic skateboarding action and event details to attract skate enthusiasts.' },
     { title: 'TEAR', thumbNailUrl: '/assets/designs/thumbs/TEAR333-01.png', imageUrl: '/assets/designs/TEAR333-01.png', type: 'Banner', description: 'A compelling banner design titled "TEAR," featuring emotional and impactful imagery to convey its message effectively. A colorful T-themed image of a tear with vision of the world as a reflection.' },
     { title: 'TEAR SMALL', thumbNailUrl: '/assets/designs/thumbs/TEAR1-01.png', imageUrl: '/assets/designs/TEAR1-01.png', type: 'Banner', description: 'An amazing banner design titled "TEAR," capturing the essence of the theme in a colorful impactful and emotional delivery.' },
+    { title: 'To Let Poster', thumbNailUrl: '/assets/designs/thumbs/To let 2-01.png', imageUrl: '/assets/designs/To let 2-01.png', type: 'Poster', description: 'A striking poster design titled "To Let Poster," featuring vibrant navy blue and impactful imagery to attract attention and convey its message effectively.' },
+    { title: 'To Let Poster(B/W)', thumbNailUrl: '/assets/designs/thumbs/To let-01.png', imageUrl: '/assets/designs/To let-01.png', type: 'Poster', description: 'A bold black and white poster design titled "To Let Poster," utilizing high contrast imagery to effectively communicate its message and attract attention.' },
 
   ];
 
