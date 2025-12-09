@@ -53,7 +53,7 @@
 mat-card-actions a button{
   text-decoration: none;
   width: 100%;
-  color: rgb(250, 67, 250);
+  color: white;
 }
 
 a{
@@ -66,6 +66,13 @@ a{
 
 .byoing{
   animation: boinging .8s infinite;
+  border: solid #65026e 2px !important;
+}
+
+.byoing:hover{
+  animation: none;
+  background-color: #65026e;
+  color: violet !important;
 }
 
 @keyframes boinging{

@@ -4,7 +4,7 @@
     <mat-icon class="ringing" aria-label="Call" style="color: #7CE2FC;">call</mat-icon>
   </button>
 </a>
-<mat-sidenav-container [hasBackdrop]="true" class="whole">
+<mat-sidenav-container [hasBackdrop]="false" class="whole">
   <mat-sidenav #drawer id="leftdraw" class="widthing">
     <a href="/home#home">
       <button mat-button class="nobg" style="outline: none; height: 250px;" (click)="drawer.toggle()">
@@ -133,11 +133,11 @@
       </mat-list-item>
     </mat-list>
   </mat-sidenav>
-  <section class="overflowing">
-    <button mat-button (click)="drawer.toggle()" class="uptop" style="background: none;position: absolute;">
+  <section class="overflowing" >
+    <button mat-button (click)="drawer.open(); ender.close()" class="uptop" style="background: none;position: absolute;">
       <mat-icon aria-label="Open Menu" class="rotation">menu_open</mat-icon>
     </button>
-    <button mat-button (click)="ender.toggle()" class="rightee uptop" style="background: none;position: absolute;">
+    <button mat-button (click)="ender.toggle(); drawer.close()" class="rightee uptop" style="background: none;position: absolute;">
       <mat-icon aria-label="Open Menu">menu_open</mat-icon>
     </button>
     <div class="custom-shape-divider-top-1613575268">
@@ -147,6 +147,9 @@
         <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
       </svg>
     </div>
-    <router-outlet></router-outlet>
+    <div (click)="drawer.close(); ender.close()">
+      <router-outlet></router-outlet>
+    </div>
+
   </section>
 </mat-sidenav-container>
