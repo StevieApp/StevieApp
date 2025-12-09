@@ -236,6 +236,12 @@ mat-sidenav mat-list mat-list-item p{
   text-align: center !important;
   cursor: pointer;
   margin-bottom: 0px !important;
+  text-shadow:
+    1px 1px 2px #65026e,     /* strong dark edge */
+    0 0 2px #65026e,                 /* small purple glow */
+    0 0 1px #7CE2FC;                 /* tiny aqua highlight */
+
+
 }
 
 mat-sidenav mat-list mat-list-item{
