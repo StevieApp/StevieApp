@@ -43,3 +43,66 @@
   font-family: 'Agency FB', arial;
   color: #65026e;
 }
+
+@media only screen and (max-width: 600px) {
+  .display-4{
+    font-size: 40px;
+  }
+}
+
+mat-card-actions a button{
+  text-decoration: none;
+  width: 100%;
+  color: rgb(250, 67, 250);
+}
+
+a{
+  text-decoration: none;
+}
+
+.row{
+  margin: 0px;
+}
+
+.byoing{
+  animation: boinging .8s infinite;
+}
+
+@keyframes boinging{
+  0%{
+    transform: scale(1,1);
+  }
+  50%{
+    transform: scale(1.05,1.05);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.fittings{
+  object-fit: cover;
+  object-position: center;
+  height: 150px;
+}
