@@ -66,25 +66,40 @@
   margin-right: 10px;
 }
 
-.uptop3{
+.uptop3 {
   z-index: 1000;
   background: none;
   margin-left: 10px;
   color: white;
   font-weight: 300;
-  /* font-size: 35px; */
   border: purple solid 2px;
   display: block;
-  animation: uptoping 4s infinite;
-}
-
-.uptop3:hover{
-  animation: none;
+  transition: all .3s ease-in-out;
 }
 
 .uptop3 svg{
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.uptop3:hover{
+  transform: scale(1.1);
+  background-color: #65026e;
+}
+
+.uptoper{
+  /* animation */
+  animation: uptoping 4s ease-in-out infinite;
+  /* animation-play-state: running;  */
+  /* default */
+}
+
+.uptoper:hover {
+  /* pause the animation on hover */
+  /* animation-play-state: paused; */
+  animation: none;
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
 @keyframes uptoping{
