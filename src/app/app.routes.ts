@@ -10,12 +10,6 @@ import { Home } from './home/home';
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: Home },
-  // { path: 'contact', component: Contact },
-  // { path: 'blog', component: Blog },
-  // { path: 'socials', component: Socials },
-  // { path: 'portifolio', component: Technologies },
-  // { path: 'stories/:Title', component: StoriesComponent },
-  // { path: 'editstories/:Title', component: EditStoriesComponent },
   { path: 'teachie-app-privacy-policy', component: TeachieAppPrivacyPolicy },
   { path: 'app-privacy-policy', component: AppPrivacyPolicy },
 ];
