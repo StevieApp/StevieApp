@@ -318,44 +318,100 @@ code::deep{
   opacity: 0.2;
 }
 
-.wave1 {
-  animation: wave1 4s linear infinite alternate;
-}
+/* .wave1 {
+  animation: wave1 1s linear infinite alternate;
+} */
 
-.wave2 {
-  animation: wave2 3s linear infinite alternate-reverse;
-}
+/* .wave2 {
+  animation: wave2 2s linear infinite alternate-reverse;
+} */
 
 .wave3 {
-  animation: wave3 7s linear infinite alternate;
+  animation: wave3 3s linear infinite alternate;
+}
+
+/* .wave4 {
+  animation: wave4 4s linear infinite alternate;
+} */
+
+.wave5 {
+  animation: wave5 5s linear infinite alternate-reverse;
+}
+
+.wave6 {
+  animation: wave6 6s linear infinite alternate;
+}
+
+.wave7 {
+  animation: wave7 7s linear infinite alternate;
 }
 
 /* WAVE 1 — lightest layer */
-@keyframes wave1 {
+/* @keyframes wave1 {
   0%   { transform: translateX(0);         opacity: 0.05; }
-  10%  { opacity: 0.18; }   /* gentle fade in */
-  25%  { opacity: 0.25; }   /* reach max opacity smoothly */
-  75%  { opacity: 0.25; }   /* hold */
-  90%  { opacity: 0.12; }   /* soft fade */
+  10%  { opacity: 0.18; }
+  25%  { opacity: 0.25; }
+  75%  { opacity: 0.25; }
+  90%  { opacity: 0.12; }
   100% { transform: translateX(-150px);    opacity: 0.05; }
-}
+} */
 
 /* WAVE 2 — mid layer, opposite direction */
-@keyframes wave2 {
+/* @keyframes wave2 {
   0%   { transform: translateX(-10px);     opacity: 0.05; }
   10%  { opacity: 0.25; }
-  25%  { opacity: 0.5; }    /* max opacity */
+  25%  { opacity: 0.5; }
   75%  { opacity: 0.5; }
-  90%  { opacity: 0.25; }   /* smoother fade out */
+  90%  { opacity: 0.25; }
   100% { transform: translateX(-150px);     opacity: 0.05; }
-}
+} */
 
 /* WAVE 3 — strongest top layer */
 @keyframes wave3 {
   0%   { transform: translateX(5px);       opacity: 0.05; }
   10%  { opacity: 0.55; }
-  25%  { opacity: 1; }     /* max opacity */
+  25%  { opacity: 1; }
   75%  { opacity: 1; }
-  90%  { opacity: 0.4; }   /* slow, realistic fade */
+  90%  { opacity: 0.4; }
   100% { transform: translateX(-150px);    opacity: 0.05; }
 }
+
+/* @keyframes wave4 {
+  0%   { transform: translateX(0);         opacity: 0.05; }
+  10%  { opacity: 0.18; }
+  25%  { opacity: 0.25; }
+  75%  { opacity: 0.25; }
+  90%  { opacity: 0.12; }
+  100% { transform: translateX(-150px);    opacity: 0.05; }
+} */
+
+/* WAVE 2 — mid layer, opposite direction */
+@keyframes wave5 {
+  0%   { transform: translateX(-10px);     opacity: 0.05; }
+  10%  { opacity: 0.25; }
+  25%  { opacity: 0.5; }
+  75%  { opacity: 0.5; }
+  90%  { opacity: 0.25; }
+  100% { transform: translateX(-150px);     opacity: 0.05; }
+}
+
+/* WAVE 3 — strongest top layer */
+@keyframes wave6 {
+  0%   { transform: translateX(5px);       opacity: 0.05; }
+  10%  { opacity: 0.55; }
+  25%  { opacity: 1; }
+  75%  { opacity: 1; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateX(-150px);    opacity: 0.05; }
+}
+
+@keyframes wave7 {
+  0%   { transform: translateX(0);         opacity: 0.05; }
+  10%  { opacity: 0.18; }
+  25%  { opacity: 0.25; }
+  75%  { opacity: 0.25; }
+  90%  { opacity: 0.12; }
+  100% { transform: translateX(-150px);    opacity: 0.05; }
+}
+
+
