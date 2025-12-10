@@ -7,10 +7,11 @@ import { MatIcon } from '@angular/material/icon';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { Contact } from "../contact/contact";
 import { DesignImages } from "../design-images/design-images";
+import { Portfolio } from "../portfolio/portfolio";
 
 @Component({
   selector: 'app-home',
-  imports: [MatDivider, Socials, Technologies, MatGridTile, MatIcon, MatGridList, MatButtonModule, Contact, DesignImages],
+  imports: [MatDivider, Socials, Technologies, MatGridTile, MatIcon, MatGridList, MatButtonModule, Contact, DesignImages, Portfolio],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

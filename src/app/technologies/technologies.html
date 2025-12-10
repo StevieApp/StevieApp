@@ -1,30 +1,28 @@
-<div class="lessee" id="portfolio">
-  <h1 class="display-4" style="text-align: center;">Portfolio</h1>
-  <h1 class="display-3" style="text-align: center;">I create BackEnd using NodeJS. FrontEnd applications using AngularJS.
-    Hybrid Applications (iOS, Android) using Ionic Framework. Mobile Applications (Android) using Java.
-    I also create logos using Adobe Photoshop and can animate them using Adobe Premiere.
+<div class="lessee" id="technologies">
+  <h1 class="display-4" style="text-align: center;">Technologies/Software</h1>
+  <h1 class="display-3" style="text-align: center;">I use the following technologies for Web Development, CNC Programming, Mobile App Development, Desktop App Development, Design (Sheet Metal, Banner, Brochure Design, Poster), Video Editing, among others.
   </h1>
   <div style="position: relative;z-index: 100;margin-top: auto;">
     <div class="row" style="max-width: 100%;">
-      @for (portfolio of portfolios; track $index) {
-        <div class="col-12 col-sm-4 col-md-4" >
+      @for (technology of technologies; track $index) {
+        <div class="col-4 col-sm-3 col-md-2" >
           <mat-card class="example-card" style="opacity: .8;
           background-image: linear-gradient(purple, purple, blue);
           color: white;font-weight: 300; margin-bottom: 10px;">
-            <img mat-card-image src="{{portfolio.imageurl}}" class="fittings" height="200px">
+            <img mat-card-image src="{{technology.imageurl}}" class="fittings" height="200px">
             <mat-card-header>
               <!-- <div mat-card-avatar class="example-header-image"></div> -->
-              <mat-card-title style="font-weight: 300;">{{portfolio.title}}</mat-card-title>
-              <mat-card-subtitle style="color: white;">{{portfolio.type}}</mat-card-subtitle>
+              <mat-card-title style="font-weight: 300;">{{technology.title}}</mat-card-title>
+              <mat-card-subtitle style="color: white;">{{technology.type}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
               <p>
-              {{portfolio.description}}
+              {{technology.description}}
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <a href="{{portfolio.link}}" style="display: inline-block;" target="_blank">
-                  <button mat-button class="byoing">{{portfolio.text}}</button>
+              <a href="{{technology.link}}" style="display: inline-block;" target="_blank">
+                  <button mat-button class="byoing">{{technology.text}}</button>
               </a>
             </mat-card-actions>
           </mat-card>
