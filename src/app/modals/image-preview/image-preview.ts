@@ -19,19 +19,22 @@ export class ImagePreview {
   //   console.log('ImagePreview data:', this.data);
   // }
 
-  onImageLoad(img: HTMLImageElement) {
-    // Wait until the image is fully decoded
-    img.decode().then(() => {
-      // Optionally wait one frame to make sure it's painted
-      requestAnimationFrame(() => {
-        this.loaded.set(true);
-      });
-    }).catch(() => {
-      // fallback if decode fails
-      // this.loaded.set(true);
-      this.openSnackBar('Failed to load image.', 'Close');
-    });
-  }
+  // onImageLoad(img: HTMLImageElement) {
+  //   // Wait until the image is fully decoded
+  //   img.decode().then(() => {
+  //     // Optionally wait one frame to make sure it's painted
+  //     // requestAnimationFrame(() => {
+  //     setTimeout(() => {
+  //       this.loaded.set(true);
+  //     }, 1000);
+  //     // });
+  //   }).catch((err) => {
+  //     // fallback if decode fails
+  //     // this.loaded.set(true);
+  //     this.openSnackBar('Failed to load image.', 'Close');
+  //     console.error('Image decode error:', err);
+  //   });
+  // }
 
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
